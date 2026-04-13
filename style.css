@@ -1,0 +1,115 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffe6eb 0%, #ffc0cb 100%);
+    font-family: 'Poppins', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    max-width: 90%;
+    z-index: 10;
+    position: relative;
+}
+
+h1 {
+
+    font-family: 'Pacifico', 'Brush Script MT', 'Segoe Script', cursive;
+    color: #d32f2f;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    color: #d32f2f;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+.gif-container {
+    font-size: 100px; 
+    margin-bottom: 20px;
+    animation: bounce 2s infinite; 
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 600;
+}
+
+#yesBtn {
+    background-color: #ff4081;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+}
+
+#yesBtn:hover {
+    transform: scale(1.1);
+    background-color: #f50057;
+}
+
+#noBtn {
+    background-color: white;
+    color: #ff4081;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    color: #ff4081;
+    opacity: 0.5;
+    animation: float 6s linear infinite;
+    z-index: -1;
+    user-select: none;
+}
+
+.confetti-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    animation: fall linear forwards;
+    z-index: 100;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    50% { opacity: 0.6; }
+    100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh) rotate(720deg); }
+}
